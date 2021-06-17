@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/strecke"
+        android:layout_width="99dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/reichw"
+        app:layout_constraintTop_toBottomOf="@+id/reichw" />
+
+    <EditText
+        android:id="@+id/reichw"
+        android:layout_width="99dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/berechnen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reichweite"
+        app:layout_constraintTop_toBottomOf="@+id/stopcounter"
+        app:layout_constraintVertical_bias="0.231" />
+
+    <TextView
+        android:id="@+id/reichweite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reichweite_in_km"
+        app:layout_constraintBottom_toTopOf="@+id/berechnen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reichw"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stopcounter"
+        app:layout_constraintVertical_bias="0.259" />
+
+    <TextView
+        android:id="@+id/streckeneingabe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="@string/strecke_in_km"
+        app:layout_constraintEnd_toEndOf="@+id/reichweite"
+        app:layout_constraintTop_toBottomOf="@+id/reichweite" />
+
+    <EditText
+        android:id="@+id/ausgabe"
+        android:layout_width="367dp"
+        android:layout_height="115dp"
+        android:autofillHints="false"
+        android:inputType="none"
+        android:text="@string/display"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <Button
+        android:id="@+id/berechnen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/berechnen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stopcounter"
+        app:layout_constraintVertical_bias="0.468" />
+
+    <TextView
+        android:id="@+id/stopcounter"
+        android:layout_width="340dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:text="@string/stops"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ausgabe"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="streckeneingabe" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="streckeneingabe" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Info2</string>
+    <string name="display">Fahrtdauer</string>
+    <string name="strecke_in_km">Strecke (in KM)</string>
+    <string name="berechnen">Berechnen</string>
+    <string name="stops">Stops</string>
+    <string name="reichweite_in_km">"Reichweite (in KM) "</string>
+</resources>
